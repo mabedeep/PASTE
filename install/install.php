@@ -1,5 +1,5 @@
 <?php
-/* esPaste <https://github.com/mabedeep/esPASTE> Tu paste en español..
+/* esPaste <https://github.com/mabedeep/esPASTE> |7-4-2017| Tu paste 100% en español..
  *	    Gracias a .... jordansamuel
  * Paste <https://github.com/jordansamuel/PASTE>
  *
@@ -27,7 +27,7 @@ $con = mysqli_connect($dbhost, $dbuser, $dbpassword, $dbname);
 $x=2;$path = dirname($_SERVER['PHP_SELF']); while(max(0, --$x)) { $levelup = dirname($path); }
 
 if (mysqli_connect_errno()) {
-	echo "Failed to connect:" . mysqli_connect_error() . "<br />";
+	echo "No se ha podido conectar:" . mysqli_connect_error() . "<br />";
 }
 
 // Admin
@@ -41,7 +41,7 @@ pass VARCHAR(250)
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "admin table created.<br />";
+		echo "admin Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -60,7 +60,7 @@ ip VARCHAR(255)
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "admin_history table created.<br />";
+		echo "admin_history Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -85,7 +85,7 @@ baseurl text
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "site_info table created.<br />";
+		echo "site_info Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -105,7 +105,7 @@ siteprivate varchar(255) DEFAULT NULL
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "site_permissions table created.<br />";
+		echo "site_permissions Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -125,7 +125,7 @@ lang text
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "interface table created.<br />";
+		echo "interface Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -155,7 +155,7 @@ s_date text
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "pastes table created.<br />";
+		echo "pastes Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -179,7 +179,7 @@ ip text
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "users table created.<br />";
+		echo "users Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -196,7 +196,7 @@ last_date VARCHAR(255)
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "ban_user table created.<br />";
+		echo "ban_user Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -220,7 +220,7 @@ socket text
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "mail table created.<br />";
+		echo "mail Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -241,7 +241,7 @@ page_content longtext
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "pages table created.<br />";
+		echo "pages Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -260,7 +260,7 @@ tvisit VARCHAR(255)
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "page_view table created.<br />";
+		echo "page_view Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -277,7 +277,7 @@ ads_2 text
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "Ad related tables created. <br />";
+		echo "Ad related Tabla creada. <br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -296,7 +296,7 @@ changefreq VARCHAR(255)
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "sitemap_options table created.<br />";
+		echo "sitemap_options Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
@@ -320,7 +320,7 @@ recaptcha_secretkey text
 	// Execute query
 
 	if (mysqli_query($con, $sql)) {
-		echo "captcha table created.<br />";
+		echo "captcha Tabla creada.<br />";
 	} else {
 		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
