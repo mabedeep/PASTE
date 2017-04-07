@@ -40,7 +40,7 @@ if (isset($_SESSION['captcha_mode']) == "recaptcha") {
   <div id="top" class="clearfix">
     <!-- Start App Logo -->
     <div class="applogo">
-      <a href="<?php echo '//' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\');?>" class="logo"><?php echo $site_name;?></a>
+     <i class="fa fa-university fa-3x" aria-hidden="true"></i> <a href="<?php echo '//' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\');?>" class="logo"><?php echo $site_name;?></a>
     </div>
     <!-- End App Logo -->
 
@@ -54,15 +54,15 @@ if (isset($_SESSION['captcha_mode']) == "recaptcha") {
     <!-- Start Top Menu -->
     <ul class="topmenu">
 		<li class="link pastenew">
-		  <a href="<?php echo dirname($_SERVER['PHP_SELF']);?>" class="pastebutton"><i class="fa fa-clipboard fa-2x" aria-hidden="true"></i></a>
+		  <a href="<?php echo dirname($_SERVER['PHP_SELF']);?>" class="pastebutton"><i class="fa fa-plus-square fa-2x" aria-hidden="true"></i></a>
 		</li>
 	<?php
 	if ( isset($privatesite) && $privatesite == "on") { // Hide if site is private
 		} else {
 			if ($mod_rewrite == '1') {
-			echo '<li><a href="' . '//' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . '/archive">Archive</a></li>';
+			echo '<li><a href="' . '//' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . '/archive"><i class="fa fa-list fa-2x" aria-hidden="true"></i></a></li>';
 			} else {
-			echo '<li><a href="' . '//' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . '/archive.php">Archive</a></li>';
+			echo '<li><a href="' . '//' . $_SERVER['HTTP_HOST'] . rtrim(dirname($_SERVER['PHP_SELF']), '/\\') . '/archive.php"><i class="fa fa-list fa-2x" aria-hidden="true"></i></a></li>';
 			}
 		}
 	?>
