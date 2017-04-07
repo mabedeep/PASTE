@@ -1,5 +1,5 @@
 <?php
-/*
+/* esPaste <https://github.com/mabedeep/esPASTE>  ------> mod_rewrite activo por defecto.
  * Paste <https://github.com/jordansamuel/PASTE>
  *
  * This program is free software; you can redistribute it and/or
@@ -82,7 +82,7 @@ $sec_key' . " = '$data_sec';
 define('SECRET',md5(" . '$sec_key));
 
 // Set to 1 to enable Apache\'s mod_rewrite
-$mod_rewrite = "0";
+$mod_rewrite = "1";
 
 // Available GeSHi formats
 $geshiformats =array(' . "
