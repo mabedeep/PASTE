@@ -1,5 +1,6 @@
 <?php
-/*
+/* esPaste <https://github.com/mabedeep/esPASTE> Tu paste en español..
+ *	    Gracias a .... jordansamuel
  * Paste <https://github.com/jordansamuel/PASTE>
  *
  * This program is free software; you can redistribute it and/or
@@ -42,7 +43,7 @@ pass VARCHAR(250)
 	if (mysqli_query($con, $sql)) {
 		echo "admin table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	$query = "INSERT INTO admin (user,pass) VALUES ('$admin_user','$admin_pass')";
@@ -61,7 +62,7 @@ ip VARCHAR(255)
 	if (mysqli_query($con, $sql)) {
 		echo "admin_history table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 // Site info
@@ -86,7 +87,7 @@ baseurl text
 	if (mysqli_query($con, $sql)) {
 		echo "site_info table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	$query = "INSERT INTO site_info (title,des,keyword,site_name,email,twit,face,gplus,ga,additional_scripts,baseurl) VALUES ('Paste','Paste can store text, source code or sensitive data for a set period of time.','paste,pastebin.com,pastebin,text,paste,online paste','Paste','','https://twitter.com/','https://www.facebook.com/','https://plus.google.com/','UA-','','" . '//' . $_SERVER['SERVER_NAME'] . $levelup . "')";
@@ -106,7 +107,7 @@ siteprivate varchar(255) DEFAULT NULL
 	if (mysqli_query($con, $sql)) {
 		echo "site_permissions table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	$query = "INSERT INTO site_permissions (id,disableguest,siteprivate) VALUES (1, 'on', 'on'), (2, 'off', 'off')";
@@ -126,10 +127,10 @@ lang text
 	if (mysqli_query($con, $sql)) {
 		echo "interface table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
-	$query = "INSERT INTO interface (theme,lang) VALUES ('default','en.php')";
+	$query = "INSERT INTO interface (theme,lang) VALUES ('default','es_ES.php')";
 	mysqli_query($con, $query);
 
 // Pastes
@@ -156,7 +157,7 @@ s_date text
 	if (mysqli_query($con, $sql)) {
 		echo "pastes table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 // Users
@@ -180,7 +181,7 @@ ip text
 	if (mysqli_query($con, $sql)) {
 		echo "users table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 
@@ -197,7 +198,7 @@ last_date VARCHAR(255)
 	if (mysqli_query($con, $sql)) {
 		echo "ban_user table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	mysqli_query($con, $query);
@@ -221,7 +222,7 @@ socket text
 	if (mysqli_query($con, $sql)) {
 		echo "mail table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	$query = "INSERT INTO mail (verification,smtp_host,smtp_username,smtp_password,smtp_port,protocol,auth,socket) VALUES ('enabled','','','','','1','true','ssl')";
@@ -242,7 +243,7 @@ page_content longtext
 	if (mysqli_query($con, $sql)) {
 		echo "pages table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	mysqli_query($con, $query);
@@ -261,7 +262,7 @@ tvisit VARCHAR(255)
 	if (mysqli_query($con, $sql)) {
 		echo "page_view table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 // Ads
@@ -278,7 +279,7 @@ ads_2 text
 	if (mysqli_query($con, $sql)) {
 		echo "Ad related tables created. <br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	$query = "INSERT INTO ads (text_ads,ads_1,ads_2) VALUES ('','','')";
@@ -297,7 +298,7 @@ changefreq VARCHAR(255)
 	if (mysqli_query($con, $sql)) {
 		echo "sitemap_options table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	$query = "INSERT INTO sitemap_options (id,priority,changefreq) VALUES ('1','0.9','daily')";
@@ -321,11 +322,11 @@ recaptcha_secretkey text
 	if (mysqli_query($con, $sql)) {
 		echo "captcha table created.<br />";
 	} else {
-		echo "Error creating table: " . mysqli_error($con) . "<br />";
+		echo "Error al crear la tabla: " . mysqli_error($con) . "<br />";
 	}
 
 	$query = "INSERT INTO captcha (cap_e,mode,mul,allowed,color,recaptcha_sitekey,recaptcha_secretkey) VALUES ('off','Normal','off','ABCDEFGHIJKLMNOPQRSTUVYXYZabcdefghijklmnopqrstuvwxyz0123456789','#000000','','')";
 	mysqli_query($con, $query);
 ?>
 
-If you received no errors above, you can assume everything went OK. You can now remove the /install directory and proceed to the <a href="../" class="btn btn-default">main site</a> or your <a href="../admin" class="btn btn-default">dashboard</a>
+Si no recibió ningún error anterior, puede asumir que todo salió bien. Ahora tiene que BORRAR el directorio /install y visitar su <a href="../" class="btn btn-default">sitio principal</a> o su <a href="../admin" class="btn btn-default">Panel de Admin</a>
